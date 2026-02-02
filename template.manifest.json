@@ -1,0 +1,16 @@
+{
+  "name": "cc-remotion-video-template",
+  "entry": "src/index.ts",
+  "propsSchema": "resolved-edl.v1",
+  "compositions": [
+    { "id": "FullVideo", "type": "youtube", "aspect": "16:9", "default": true },
+    { "id": "TikTokVideo", "type": "tiktok", "aspect": "9:16" },
+    { "id": "Audiogram", "type": "audiogram", "aspect": "1:1" },
+    { "id": "Thumbnail", "type": "still", "aspect": "16:9" }
+  ],
+  "capabilities": {
+    "captions": ["none", "karaoke", "tiktok"],
+    "background": ["image", "video"],
+    "music": true
+  }
+}
