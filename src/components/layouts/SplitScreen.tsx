@@ -1,6 +1,6 @@
 import { AbsoluteFill, useVideoConfig } from "remotion";
 import { ReactNode } from "react";
-import { useVideoFormat } from "../utils";
+import { useVideoFormat } from "../../utils";
 
 interface SplitScreenProps {
   /** Left/Top content */

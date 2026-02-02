@@ -1,19 +1,16 @@
 import { AbsoluteFill, useCurrentFrame, interpolate } from 'remotion';
-import { evolvePath } from '@remotion/paths';
 
 export const SceneThree: React.FC = () => {
   const frame = useCurrentFrame();
   const fps = 30;
 
-  const progress = Math.min(frame / (fps * 2), 1);
-
-  // SVG morphing example
-  const path = evolvePath(progress, [
-    'M 50,50 L 150,50 L 150,150 L 50,150 Z', // Square
-    'M 100,30 L 170,100 L 130,170 L 70,170 L 30,100 Z', // Pentagon
-  ]);
-
   const rotation = interpolate(frame, [0, fps * 3], [0, 360]);
+  const scale = interpolate(
+    frame,
+    [0, fps * 1.5, fps * 3],
+    [1, 1.3, 1],
+    { extrapolateRight: 'clamp' }
+  );
 
   return (
     <AbsoluteFill
@@ -25,12 +22,10 @@ export const SceneThree: React.FC = () => {
     >
       <svg width="400" height="400" viewBox="0 0 200 200">
         <path
-          d={path}
+          d="M 100,30 L 170,100 L 130,170 L 70,170 L 30,100 Z"
           fill="white"
-          style={{
-            transform: `rotate(${rotation}deg)`,
-            transformOrigin: 'center',
-          }}
+          transform={`rotate(${rotation} 100 100) scale(${scale})`}
+          transform-origin="100 100"
         />
       </svg>
       <h2
@@ -43,7 +38,7 @@ export const SceneThree: React.FC = () => {
           textAlign: 'center',
         }}
       >
-        SVG Morphing
+        Animated Shapes
       </h2>
     </AbsoluteFill>
   );

@@ -1,8 +1,8 @@
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { noise2D } from "@remotion/noise";
-import { makeTransform, scale as scaleTransform, translate, rotate } from "@remotion/animation-utils";
 import { ReactNode } from "react";
-import { useVideoFormat } from "../utils";
+import { makeTransform, scale as scaleTransform, translate, rotate } from "@remotion/animation-utils";
+import { noise2D } from "@remotion/noise";
+import { useVideoFormat } from "../../utils";
 
 type Position = "top-left" | "top-right" | "bottom-left" | "bottom-right";
 
