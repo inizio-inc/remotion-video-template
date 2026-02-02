@@ -1,9 +1,9 @@
 import { AbsoluteFill, useCurrentFrame } from "remotion";
-import type { ResolvedEDLv1 } from "../types";
+import type { VideoPlanV1 } from "../types";
 
 interface KaraokeCaptionsProps {
   text: string;
-  timestamps?: ResolvedEDLv1["scenes"][number]["timestamps"];
+  timestamps?: VideoPlanV1["scenes"][number]["timestamps"];
   fps: number;
 }
 

@@ -1,5 +1,5 @@
-export type ResolvedEDLv1 = {
-  schemaVersion: "resolved-edl.v1";
+export type VideoPlanV1 = {
+  schemaVersion: "video-plan.v1";
   format: { width: number; height: number; fps: number };
   title?: string;
   captions?: { mode: "none" | "karaoke" | "tiktok" };

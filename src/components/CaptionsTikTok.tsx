@@ -1,10 +1,10 @@
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { createTikTokStyleCaptions } from "@remotion/captions";
-import type { ResolvedEDLv1 } from "../types";
+import type { VideoPlanV1 } from "../types";
 
 interface TikTokCaptionsProps {
   text: string;
-  timestamps?: ResolvedEDLv1["scenes"][number]["timestamps"];
+  timestamps?: VideoPlanV1["scenes"][number]["timestamps"];
   fps: number;
 }
 
@@ -17,7 +17,7 @@ type CaptionToken = {
 };
 
 const buildCaptionsFromCharacters = (
-  timestamps: ResolvedEDLv1["scenes"][number]["timestamps"]
+  timestamps: VideoPlanV1["scenes"][number]["timestamps"]
 ): CaptionToken[] => {
   if (!timestamps) {
     return [];

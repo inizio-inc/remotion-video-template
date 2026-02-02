@@ -1,6 +1,6 @@
-# Remotion Video Template (Resolved EDL)
+# Remotion Video Template (Video Plan)
 
-This repo provides Remotion compositions that accept the **Resolved EDL v1** contract and render videos deterministically without network calls.
+This repo provides Remotion compositions that accept the **Video Plan v1** contract and render videos deterministically without network calls.
 
 ## Files
 - `template.manifest.json` defines supported compositions and capabilities.
@@ -8,7 +8,7 @@ This repo provides Remotion compositions that accept the **Resolved EDL v1** con
 - `src/RemotionRoot.tsx` defines compositions and metadata.
 
 ## Expected Props
-All compositions accept a `ResolvedEDLv1` object. See `src/types.ts` for the schema.
+All compositions accept a `VideoPlanV1` object. See `src/types.ts` for the schema.
 
 ## Development
 ```bash
@@ -18,5 +18,5 @@ npm run dev
 
 ## Render (example)
 ```bash
-npx remotion render FullVideo out/video.mp4 --props=public/resolved-edl.json
+npx remotion render FullVideo out/video.mp4 --props=public/video-plan.json
 ```

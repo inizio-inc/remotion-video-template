@@ -1,11 +1,11 @@
 import { AbsoluteFill, Audio, staticFile } from "remotion";
-import type { CaptionMode, ResolvedEDLv1 } from "../types";
+import type { CaptionMode, VideoPlanV1 } from "../types";
 import { Background } from "./Background";
 import { KaraokeCaptions } from "./CaptionsKaraoke";
 import { TikTokCaptions } from "./CaptionsTikTok";
 
 interface SceneProps {
-  scene: ResolvedEDLv1["scenes"][number];
+  scene: VideoPlanV1["scenes"][number];
   fps: number;
   durationInFrames: number;
   captionMode: CaptionMode;

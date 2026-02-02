@@ -1,9 +1,9 @@
 import { AbsoluteFill, staticFile } from "remotion";
-import type { ResolvedEDLv1 } from "../types";
+import type { VideoPlanV1 } from "../types";
 import { Background } from "../components/Background";
 
-export const Thumbnail: React.FC<ResolvedEDLv1> = (edl) => {
-  const firstScene = edl.scenes[0];
+export const Thumbnail: React.FC<VideoPlanV1> = (plan) => {
+  const firstScene = plan.scenes[0];
 
   if (!firstScene) {
     return (

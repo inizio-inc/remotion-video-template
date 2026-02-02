@@ -1,7 +1,7 @@
 {
   "name": "cc-remotion-video-template",
   "entry": "src/index.ts",
-  "propsSchema": "resolved-edl.v1",
+  "propsSchema": "video-plan.v1",
   "compositions": [
     { "id": "FullVideo", "type": "youtube", "aspect": "16:9", "default": true },
     { "id": "TikTokVideo", "type": "tiktok", "aspect": "9:16" },

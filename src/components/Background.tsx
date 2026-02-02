@@ -1,8 +1,8 @@
 import { AbsoluteFill, Img, OffthreadVideo, interpolate, useCurrentFrame } from "remotion";
-import type { ResolvedEDLv1 } from "../types";
+import type { VideoPlanV1 } from "../types";
 
 interface BackgroundProps {
-  background: ResolvedEDLv1["scenes"][number]["background"];
+  background: VideoPlanV1["scenes"][number]["background"];
   fps: number;
   durationInFrames: number;
 }

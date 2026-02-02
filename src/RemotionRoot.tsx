@@ -3,11 +3,11 @@ import { FullVideo } from "./compositions/FullVideo";
 import { TikTokVideo } from "./compositions/TikTokVideo";
 import { Audiogram } from "./compositions/Audiogram";
 import { Thumbnail } from "./compositions/Thumbnail";
-import type { ResolvedEDLv1 } from "./types";
-import { getTotalDurationInFrames } from "./utils/edl";
+import type { VideoPlanV1 } from "./types";
+import { getTotalDurationInFrames } from "./utils/plan";
 
-const DEFAULT_EDL: ResolvedEDLv1 = {
-  schemaVersion: "resolved-edl.v1",
+const DEFAULT_PLAN: VideoPlanV1 = {
+  schemaVersion: "video-plan.v1",
   format: { width: 1920, height: 1080, fps: 30 },
   captions: { mode: "none" },
   scenes: [],
@@ -23,13 +23,13 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
-        defaultProps={DEFAULT_EDL}
+        defaultProps={DEFAULT_PLAN}
         calculateMetadata={({ props }) => {
-          const edl = props as ResolvedEDLv1;
-          const durationInFrames = getTotalDurationInFrames(edl);
+          const plan = props as VideoPlanV1;
+          const durationInFrames = getTotalDurationInFrames(plan);
           return {
             durationInFrames,
-            fps: edl.format?.fps || 30,
+            fps: plan.format?.fps || 30,
             width: 1920,
             height: 1080,
           };
@@ -43,15 +43,15 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={{
-          ...DEFAULT_EDL,
+          ...DEFAULT_PLAN,
           format: { width: 1080, height: 1920, fps: 30 },
         }}
         calculateMetadata={({ props }) => {
-          const edl = props as ResolvedEDLv1;
-          const durationInFrames = getTotalDurationInFrames(edl);
+          const plan = props as VideoPlanV1;
+          const durationInFrames = getTotalDurationInFrames(plan);
           return {
             durationInFrames,
-            fps: edl.format?.fps || 30,
+            fps: plan.format?.fps || 30,
             width: 1080,
             height: 1920,
           };
@@ -65,15 +65,15 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1080}
         defaultProps={{
-          ...DEFAULT_EDL,
+          ...DEFAULT_PLAN,
           format: { width: 1080, height: 1080, fps: 30 },
         }}
         calculateMetadata={({ props }) => {
-          const edl = props as ResolvedEDLv1;
-          const durationInFrames = getTotalDurationInFrames(edl);
+          const plan = props as VideoPlanV1;
+          const durationInFrames = getTotalDurationInFrames(plan);
           return {
             durationInFrames,
-            fps: edl.format?.fps || 30,
+            fps: plan.format?.fps || 30,
             width: 1080,
             height: 1080,
           };
@@ -86,7 +86,7 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
-        defaultProps={DEFAULT_EDL}
+        defaultProps={DEFAULT_PLAN}
       />
     </>
   );
