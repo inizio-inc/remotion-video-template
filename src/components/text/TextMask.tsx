@@ -1,4 +1,4 @@
-import { AbsoluteFill, Img, OffthreadVideo, spring, useCurrentFrame, useVideoConfig, staticFile } from "remotion";
+import { AbsoluteFill, Img, OffthreadVideo, spring, useCurrentFrame, useVideoConfig, staticFile, random } from "remotion";
 import { fitText } from "@remotion/layout-utils";
 import { makeTransform, scale as scaleTransform } from "@remotion/animation-utils";
 import { useMemo } from "react";
@@ -28,7 +28,6 @@ interface TextMaskProps {
   delay?: number;
   /** Background color (visible around text) */
   backgroundColor?: string;
-  style?: React.CSSProperties;
 }
 
 /**
@@ -49,7 +48,6 @@ export const TextMask: React.FC<TextMaskProps> = ({
   animate = true,
   delay = 0,
   backgroundColor = "#0a0a0a",
-  style,
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
@@ -79,7 +77,7 @@ export const TextMask: React.FC<TextMaskProps> = ({
   const finalFontSize = Math.min(fontSize, maxFontSize);
 
   // Generate unique ID for this instance
-  const clipId = useMemo(() => `text-clip-${Math.random().toString(36).substr(2, 9)}`, []);
+  const clipId = useMemo(() => `text-clip-${random(text).toString(36).substr(2, 9)}`, [text]);
 
   // Calculate text position
   const textX = align === "center" ? "50%" : align === "right" ? "95%" : "5%";

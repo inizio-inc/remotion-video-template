@@ -63,7 +63,7 @@ export const CaptionRenderer: React.FC<{
         textTransform: "uppercase",
       });
       return Math.min(targetSize, fittedText.fontSize);
-    } catch (error) {
+    } catch {
       const textLength = textToFit.length;
       const targetWidth = width * 0.9;
       const approximateFontSize = Math.floor(targetWidth / (textLength * 0.6));

@@ -43,6 +43,7 @@ export const GrainOverlay: React.FC<GrainOverlayProps> = ({
       {children}
       <AbsoluteFill
         style={{
+          // eslint-disable-next-line @remotion/no-background-image
           backgroundImage: `url("${encodedSvg}")`,
           backgroundRepeat: "repeat",
           opacity: intensity,

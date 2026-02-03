@@ -280,7 +280,7 @@ export const TextLogoReveal: React.FC<{
             config: { damping: 15, stiffness: 150 },
           });
 
-          let charStyle: React.CSSProperties = {
+          const charStyle: React.CSSProperties = {
             fontSize,
             fontWeight,
             color,
