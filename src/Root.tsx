@@ -1,6 +1,7 @@
 import { Composition, staticFile } from "remotion";
 import { Scene, myCompSchema } from "./Scene";
 import { getMediaMetadata } from "./helpers/get-media-metadata";
+import { ReelsExample, REELS_EXAMPLE_DURATION, Showcase, SHOWCASE_DURATION } from "./examples";
 
 // Welcome to the Remotion Three Starter Kit!
 // Two compositions have been created, showing how to use
@@ -51,6 +52,36 @@ export const RemotionRoot: React.FC = () => {
             },
           };
         }}
+      />
+
+      {/* Reels/TikTok Example - 9:16 vertical */}
+      <Composition
+        id="ReelsExample"
+        component={ReelsExample}
+        fps={30}
+        durationInFrames={REELS_EXAMPLE_DURATION}
+        width={1080}
+        height={1920}
+      />
+
+      {/* Showcase - All examples */}
+      <Composition
+        id="Showcase"
+        component={Showcase}
+        fps={30}
+        durationInFrames={SHOWCASE_DURATION}
+        width={1920}
+        height={1080}
+      />
+
+      {/* Showcase Vertical - For mobile preview */}
+      <Composition
+        id="ShowcaseVertical"
+        component={Showcase}
+        fps={30}
+        durationInFrames={SHOWCASE_DURATION}
+        width={1080}
+        height={1920}
       />
     </>
   );
