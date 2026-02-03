@@ -1,6 +1,6 @@
 import { AbsoluteFill, useCurrentFrame, interpolate } from 'remotion';
 
-export const SceneThree: React.FC = () => {
+export const ContentScene: React.FC = () => {
   const frame = useCurrentFrame();
   const fps = 30;
 
@@ -38,7 +38,7 @@ export const SceneThree: React.FC = () => {
           textAlign: 'center',
         }}
       >
-        Animated Shapes
+        CONTENT
       </h2>
     </AbsoluteFill>
   );

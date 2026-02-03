@@ -1,25 +1,25 @@
 import { AbsoluteFill, useCurrentFrame, interpolate, spring } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Anton';
+import { loadFont } from '@remotion/google-fonts/Righteous';
 
 const { fontFamily } = loadFont();
 
-export const SceneOne: React.FC = () => {
+export const HookScene: React.FC = () => {
   const frame = useCurrentFrame();
   const fps = 30;
 
   const titleProgress = spring({
     frame,
     fps,
-    config: { damping: 15 },
+    config: { damping: 12, stiffness: 180 },
   });
 
   const opacity = interpolate(titleProgress, [0, 1], [0, 1]);
-  const scale = interpolate(titleProgress, [0, 1], [0.8, 1]);
+  const translateY = interpolate(titleProgress, [0, 1], [50, 0]);
 
   return (
     <AbsoluteFill
       style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
         justifyContent: 'center',
         alignItems: 'center',
       }}
@@ -28,15 +28,15 @@ export const SceneOne: React.FC = () => {
         style={{
           fontFamily,
           fontSize: 120,
-          fontWeight: 900,
+          fontWeight: 400,
           color: 'white',
           opacity,
-          transform: `scale(${scale})`,
+          transform: `translateY(${translateY}px)`,
           textAlign: 'center',
-          letterSpacing: '-0.05em',
+          letterSpacing: '-0.02em',
         }}
       >
-        SCENE ONE
+        HOOK
       </h1>
     </AbsoluteFill>
   );

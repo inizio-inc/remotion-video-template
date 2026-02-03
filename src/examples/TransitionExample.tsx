@@ -1,9 +1,9 @@
 import { AbsoluteFill, Sequence } from 'remotion';
 import { SlideTransition } from '../components/transitions/SlideTransition';
 import { FadeTransition } from '../components/transitions/FadeTransition';
-import { SceneOne } from './SceneOne';
-import { SceneTwo } from './SceneTwo';
-import { SceneThree } from './SceneThree';
+import { IntroScene } from './IntroScene';
+import { HookScene } from './HookScene';
+import { ContentScene } from './ContentScene';
 
 /**
  * Example composition showing transitions between scenes
@@ -24,7 +24,7 @@ export const TransitionExample: React.FC = () => {
       {/* Scene 1 with slide-in */}
       <Sequence durationInFrames={scene1Duration}>
         <SlideTransition direction="right" durationInFrames={transitionDuration}>
-          <SceneOne />
+          <IntroScene />
         </SlideTransition>
         
         {/* IMPORTANT: Audio ends BEFORE transition starts to avoid desync */}
@@ -40,7 +40,7 @@ export const TransitionExample: React.FC = () => {
       {/* Scene 2 with slide-in */}
       <Sequence from={scene1Duration} durationInFrames={scene2Duration}>
         <SlideTransition direction="left" durationInFrames={transitionDuration}>
-          <SceneTwo />
+          <HookScene />
         </SlideTransition>
         
         {/* Audio for Scene 2: also ends before transition */}
@@ -55,7 +55,7 @@ export const TransitionExample: React.FC = () => {
       {/* Scene 3 with fade-in */}
       <Sequence from={scene1Duration + scene2Duration} durationInFrames={scene3Duration}>
         <FadeTransition durationInFrames={15}>
-          <SceneThree />
+          <ContentScene />
         </FadeTransition>
         
         {/* Last scene: full duration (no transition after) */}

@@ -1,25 +1,25 @@
 import { AbsoluteFill, useCurrentFrame, interpolate, spring } from 'remotion';
-import { loadFont } from '@remotion/google-fonts/Righteous';
+import { loadFont } from '@remotion/google-fonts/Anton';
 
 const { fontFamily } = loadFont();
 
-export const SceneTwo: React.FC = () => {
+export const IntroScene: React.FC = () => {
   const frame = useCurrentFrame();
   const fps = 30;
 
   const titleProgress = spring({
     frame,
     fps,
-    config: { damping: 12, stiffness: 180 },
+    config: { damping: 15 },
   });
 
   const opacity = interpolate(titleProgress, [0, 1], [0, 1]);
-  const translateY = interpolate(titleProgress, [0, 1], [50, 0]);
+  const scale = interpolate(titleProgress, [0, 1], [0.8, 1]);
 
   return (
     <AbsoluteFill
       style={{
-        background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         justifyContent: 'center',
         alignItems: 'center',
       }}
@@ -28,15 +28,15 @@ export const SceneTwo: React.FC = () => {
         style={{
           fontFamily,
           fontSize: 120,
-          fontWeight: 400,
+          fontWeight: 900,
           color: 'white',
           opacity,
-          transform: `translateY(${translateY}px)`,
+          transform: `scale(${scale})`,
           textAlign: 'center',
-          letterSpacing: '-0.02em',
+          letterSpacing: '-0.05em',
         }}
       >
-        SCENE TWO
+        INTRO
       </h1>
     </AbsoluteFill>
   );
