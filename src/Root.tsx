@@ -1,7 +1,7 @@
 import { Composition, staticFile } from "remotion";
 import { Scene, myCompSchema } from "./Scene";
 import { getMediaMetadata } from "./helpers/get-media-metadata";
-import { ReelsExample, REELS_EXAMPLE_DURATION, Showcase, SHOWCASE_DURATION } from "./examples";
+import { ReelsExample, REELS_EXAMPLE_DURATION, TokyoLandscape, TOKYO_LANDSCAPE_DURATION, TokyoTikTok, TOKYO_TIKTOK_DURATION } from "./examples";
 
 // Welcome to the Remotion Three Starter Kit!
 // Two compositions have been created, showing how to use
@@ -64,22 +64,22 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
       />
 
-      {/* Showcase - All examples */}
+      {/* Tokyo Landscape - 16:9 with music & voiceover */}
       <Composition
-        id="Showcase"
-        component={Showcase}
+        id="TokyoLandscape"
+        component={TokyoLandscape}
         fps={30}
-        durationInFrames={SHOWCASE_DURATION}
+        durationInFrames={TOKYO_LANDSCAPE_DURATION}
         width={1920}
         height={1080}
       />
 
-      {/* Showcase Vertical - For mobile preview */}
+      {/* Tokyo TikTok - 9:16 vertical with music & voiceover */}
       <Composition
-        id="ShowcaseVertical"
-        component={Showcase}
+        id="TokyoTikTok"
+        component={TokyoTikTok}
         fps={30}
-        durationInFrames={SHOWCASE_DURATION}
+        durationInFrames={TOKYO_TIKTOK_DURATION}
         width={1080}
         height={1920}
       />

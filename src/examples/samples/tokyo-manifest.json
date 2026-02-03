@@ -1,0 +1,130 @@
+{
+  "music": {
+    "path": "samples/tokyo/audio/music.mp3",
+    "duration": 18,
+    "prompt": "uplifting background music, positive energy",
+    "cost": 0.15
+  },
+  "thumbnail": "thumbnail.jpg",
+  "images": [],
+  "videos": [],
+  "scenes": [
+    {
+      "id": 1,
+      "name": "scene-01-opening",
+      "text": "Welcome to Tokyo.",
+      "wordCount": 3,
+      "startTime": 0,
+      "endTime": 1.77,
+      "durationInSeconds": 1.77,
+      "durationInFrames": 53,
+      "audioPath": "samples/tokyo/audio/scene-01-opening.wav",
+      "timestamps": {
+        "characters": ["W", "e", "l", "c", "o", "m", "e", " ", "t", "o", " ", "T", "o", "k", "y", "o", "."],
+        "characterStartTimesSeconds": [0, 0.104, 0.208, 0.312, 0.416, 0.521, 0.625, 0.729, 0.833, 0.937, 1.041, 1.145, 1.249, 1.354, 1.458, 1.562, 1.666],
+        "characterEndTimesSeconds": [0.104, 0.208, 0.312, 0.416, 0.521, 0.625, 0.729, 0.833, 0.937, 1.041, 1.145, 1.249, 1.354, 1.458, 1.562, 1.666, 1.77]
+      }
+    },
+    {
+      "id": 2,
+      "name": "scene-02-neon",
+      "text": "Where ancient traditions meet neon dreams.",
+      "wordCount": 6,
+      "startTime": 1.77,
+      "endTime": 5.62,
+      "durationInSeconds": 3.85,
+      "durationInFrames": 116,
+      "audioPath": "samples/tokyo/audio/scene-02-neon.wav"
+    },
+    {
+      "id": 3,
+      "name": "scene-03-culture",
+      "text": "Discover timeless culture.",
+      "wordCount": 3,
+      "startTime": 5.62,
+      "endTime": 7.95,
+      "durationInSeconds": 2.33,
+      "durationInFrames": 70,
+      "audioPath": "samples/tokyo/audio/scene-03-culture.wav"
+    },
+    {
+      "id": 4,
+      "name": "scene-04-food",
+      "text": "Taste the extraordinary.",
+      "wordCount": 3,
+      "startTime": 7.95,
+      "endTime": 10.24,
+      "durationInSeconds": 2.29,
+      "durationInFrames": 69,
+      "audioPath": "samples/tokyo/audio/scene-04-food.wav"
+    },
+    {
+      "id": 5,
+      "name": "scene-05-pulse",
+      "text": "Feel the pulse of the city.",
+      "wordCount": 6,
+      "startTime": 10.24,
+      "endTime": 12.53,
+      "durationInSeconds": 2.29,
+      "durationInFrames": 69,
+      "audioPath": "samples/tokyo/audio/scene-05-pulse.wav"
+    },
+    {
+      "id": 6,
+      "name": "scene-06-adventure",
+      "text": "Your adventure awaits.",
+      "wordCount": 3,
+      "startTime": 12.53,
+      "endTime": 14.94,
+      "durationInSeconds": 2.41,
+      "durationInFrames": 72,
+      "audioPath": "samples/tokyo/audio/scene-06-adventure.wav"
+    },
+    {
+      "id": 7,
+      "name": "scene-07-closing",
+      "text": "Tokyo. Start your journey.",
+      "wordCount": 4,
+      "startTime": 14.94,
+      "endTime": 17.55,
+      "durationInSeconds": 2.61,
+      "durationInFrames": 78,
+      "audioPath": "samples/tokyo/audio/scene-07-closing.wav"
+    }
+  ],
+  "timeline": {
+    "shortTitle": "Tokyo Video",
+    "elements": [],
+    "audio": [
+      { "startMs": 0, "endMs": 1770, "audioUrl": "samples/tokyo/audio/scene-01-opening.wav" },
+      { "startMs": 1770, "endMs": 5620, "audioUrl": "samples/tokyo/audio/scene-02-neon.wav" },
+      { "startMs": 5620, "endMs": 7950, "audioUrl": "samples/tokyo/audio/scene-03-culture.wav" },
+      { "startMs": 7950, "endMs": 10240, "audioUrl": "samples/tokyo/audio/scene-04-food.wav" },
+      { "startMs": 10240, "endMs": 12530, "audioUrl": "samples/tokyo/audio/scene-05-pulse.wav" },
+      { "startMs": 12530, "endMs": 14940, "audioUrl": "samples/tokyo/audio/scene-06-adventure.wav" },
+      { "startMs": 14940, "endMs": 17550, "audioUrl": "samples/tokyo/audio/scene-07-closing.wav" }
+    ],
+    "text": [
+      { "startMs": 0, "endMs": 1770, "text": "Welcome to Tokyo.", "position": "bottom" },
+      { "startMs": 1770, "endMs": 5620, "text": "Where ancient traditions meet neon dreams.", "position": "bottom" },
+      { "startMs": 5620, "endMs": 7950, "text": "Discover timeless culture.", "position": "bottom" },
+      { "startMs": 7950, "endMs": 10240, "text": "Taste the extraordinary.", "position": "bottom" },
+      { "startMs": 10240, "endMs": 12530, "text": "Feel the pulse of the city.", "position": "bottom" },
+      { "startMs": 12530, "endMs": 14940, "text": "Your adventure awaits.", "position": "bottom" },
+      { "startMs": 14940, "endMs": 17550, "text": "Tokyo. Start your journey.", "position": "bottom" }
+    ],
+    "scenes": [
+      { "name": "scene-01-opening", "text": "Welcome to Tokyo.", "startMs": 0, "endMs": 1770 },
+      { "name": "scene-02-neon", "text": "Where ancient traditions meet neon dreams.", "startMs": 1770, "endMs": 5620 },
+      { "name": "scene-03-culture", "text": "Discover timeless culture.", "startMs": 5620, "endMs": 7950 },
+      { "name": "scene-04-food", "text": "Taste the extraordinary.", "startMs": 7950, "endMs": 10240 },
+      { "name": "scene-05-pulse", "text": "Feel the pulse of the city.", "startMs": 10240, "endMs": 12530 },
+      { "name": "scene-06-adventure", "text": "Your adventure awaits.", "startMs": 12530, "endMs": 14940 },
+      { "name": "scene-07-closing", "text": "Tokyo. Start your journey.", "startMs": 14940, "endMs": 17550 }
+    ]
+  },
+  "totalDurationInFrames": 527,
+  "fps": 30,
+  "totalCost": 0.19,
+  "createdAt": "2026-02-02T23:12:39.923Z"
+}

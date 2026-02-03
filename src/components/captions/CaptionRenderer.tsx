@@ -6,17 +6,13 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { loadFont } from "@remotion/fonts";
+import { loadFont } from "@remotion/google-fonts/Bangers";
 import { fitText } from "@remotion/layout-utils";
 import { makeTransform, scale, translateY } from "@remotion/animation-utils";
 import { TikTokPage } from "@remotion/captions";
 
-const fontFamily = "Bangers";
-
-loadFont({
-  family: fontFamily,
-  url: "https://fonts.gstatic.com/s/bangers/v24/FeVQS0BTqb0h60ACH55Q2J5hm24.ttf",
-});
+// Using @remotion/google-fonts for reliable font loading (no broken URLs)
+const { fontFamily } = loadFont();
 
 const container: React.CSSProperties = {
   justifyContent: "center",

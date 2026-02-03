@@ -1,0 +1,32 @@
+{
+  "scenes": [
+    {
+      "name": "scene-01-opening",
+      "script": "Welcome to Tokyo."
+    },
+    {
+      "name": "scene-02-neon",
+      "script": "Where ancient traditions meet neon dreams."
+    },
+    {
+      "name": "scene-03-culture",
+      "script": "Discover timeless culture."
+    },
+    {
+      "name": "scene-04-food",
+      "script": "Taste the extraordinary."
+    },
+    {
+      "name": "scene-05-pulse",
+      "script": "Feel the pulse of the city."
+    },
+    {
+      "name": "scene-06-adventure",
+      "script": "Your adventure awaits."
+    },
+    {
+      "name": "scene-07-closing",
+      "script": "Tokyo. Start your journey."
+    }
+  ]
+}
